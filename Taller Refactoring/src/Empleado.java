@@ -6,7 +6,9 @@ public class Empleado {
     private double tarifaHora;
 
     public Empleado(){}
-    public Empleado(String nombre, double salarioBase, int horasTrabajadas, double tarifaHora, String departamento) {
+
+    public Empleado(String nombre, double salarioBase, 
+    int horasTrabajadas, double tarifaHora, String departamento) {
         this.nombre = nombre;
         this.salarioBase = salarioBase;
         this.horasTrabajadas = horasTrabajadas;
