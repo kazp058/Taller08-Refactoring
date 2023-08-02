@@ -19,6 +19,13 @@ public class Empleado {
         this.genero = genero;
     }
 
+    public double calcularHorasExtras(){
+        if(horasTrabajadas > 40){
+            return (horasTrabajadas - 40) * 50;
+        }
+        return 0
+    }
+
     public double calcularSalario() {
         double salarioTotal = salarioBase;
         if(salarioBase < 0){
@@ -27,9 +34,8 @@ public class Empleado {
         if(horasTrabajadas < 0){
             throw new IllegalArgumentException("Las horas trabajadas deben ser mayor o igual a 0"); 
         }
-        if(horasTrabajadas > 40){
-            salarioTotal += (horasTrabajadas - 40) * 50;
-        }
+        
+        salarioTotal += calcularHorasExtras
 
         switch (departamento) {
             case "Sistemas":
