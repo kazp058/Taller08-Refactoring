@@ -27,30 +27,14 @@ public class Empleado {
     }
 
     public double calcularSalario() {
-        double salarioTotal = salarioBase;
         if(salarioBase < 0){
             throw new IllegalArgumentException("El salario debe ser mayor o igual a 0"); 
         }
         if(horasTrabajadas < 0){
             throw new IllegalArgumentException("Las horas trabajadas deben ser mayor o igual a 0"); 
         }
-        
-        salarioTotal += calcularHorasExtras
 
-        /*
-        switch (departamento) {
-            case "Sistemas":
-                salarioTotal += 20;
-                break;
-            case "Contabilidad":
-                salarioTotal += 10;
-                break;
-            default:
-                break;
-        }*/
-
-        salarioTotal += departamento.calcularSalarioAdicional();
-        return salarioTotal;
+        return salarioBase + calcularHorasExtras() + departamento.calcularSalarioAdicional();
     }
 
     public void imprimirDetalles(){
