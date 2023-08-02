@@ -2,7 +2,7 @@ public class Empleado {
     private String nombre;
     private double salarioBase;
     private int horasTrabajadas;
-    private String departamento;
+    private Departamento departamento;
     private double tarifaHora;
     private String genero;
 
@@ -31,6 +31,7 @@ public class Empleado {
             salarioTotal += (horasTrabajadas - 40) * 50;
         }
 
+        /*
         switch (departamento) {
             case "Sistemas":
                 salarioTotal += 20;
@@ -40,7 +41,9 @@ public class Empleado {
                 break;
             default:
                 break;
-        }
+        }*/
+
+        salarioTotal += departamento.calcularSalarioAdicional();
         return salarioTotal;
     }
 
