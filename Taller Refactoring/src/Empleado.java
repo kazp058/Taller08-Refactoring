@@ -3,18 +3,16 @@ public class Empleado {
     private double salarioBase;
     private int horasTrabajadas;
     private Departamento departamento;
-    private double tarifaHora;
     private String genero;
 
     public Empleado(){}
 
     public Empleado(String nombre, double salarioBase, 
-    int horasTrabajadas, double tarifaHora, 
+    int horasTrabajadas, 
     String departamento, String genero) {
         this.nombre = nombre;
         this.salarioBase = salarioBase;
         this.horasTrabajadas = horasTrabajadas;
-        this.tarifaHora = tarifaHora;
         this.departamento = departamento;
         this.genero = genero;
     }
@@ -67,14 +65,6 @@ public class Empleado {
 
     public void setHorasTrabajadas(int horasTrabajadas) {
         this.horasTrabajadas = horasTrabajadas;
-    }
-
-    public double getTarifaHora() {
-        return tarifaHora;
-    }
-
-    public void setTarifaHora(double tarifaHora) {
-        this.tarifaHora = tarifaHora;
     }
 
     public String getDepartamento() {
