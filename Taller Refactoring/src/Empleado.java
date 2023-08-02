@@ -4,16 +4,19 @@ public class Empleado {
     private int horasTrabajadas;
     private String departamento;
     private double tarifaHora;
+    private String genero;
 
     public Empleado(){}
 
     public Empleado(String nombre, double salarioBase, 
-    int horasTrabajadas, double tarifaHora, String departamento) {
+    int horasTrabajadas, double tarifaHora, 
+    String departamento, String genero) {
         this.nombre = nombre;
         this.salarioBase = salarioBase;
         this.horasTrabajadas = horasTrabajadas;
         this.tarifaHora = tarifaHora;
         this.departamento = departamento;
+        this.genero = genero;
     }
 
     public double calcularSalario() {
